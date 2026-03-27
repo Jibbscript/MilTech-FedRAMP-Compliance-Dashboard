@@ -6,7 +6,7 @@ A React TypeScript dashboard visualizing DoD and federal security compliance pos
 [![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit-green?logo=github)](https://Jibbscript.github.io/saronic-job-dossier/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit-green?logo=github)](https://Jibbscript.github.io/MilTech-FedRAMP-Compliance-Dashboard/)
 
 ![Dashboard Overview](docs/screenshots/overview.png)
 
@@ -45,8 +45,8 @@ Built as a demonstration of how defense and federal technology organizations can
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Jibbscript/saronic-job-dossier.git
-   cd saronic-job-dossier
+   git clone https://github.com/Jibbscript/MilTech-FedRAMP-Compliance-Dashboard.git
+   cd MilTech-FedRAMP-Compliance-Dashboard
    ```
 
 2. Install dependencies

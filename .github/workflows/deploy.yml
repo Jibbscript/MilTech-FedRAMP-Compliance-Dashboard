@@ -30,7 +30,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build -- --base=/saronic-job-dossier/
+      - run: npm run build -- --base=/MilTech-FedRAMP-Compliance-Dashboard/
 
       - uses: actions/configure-pages@v5
 
