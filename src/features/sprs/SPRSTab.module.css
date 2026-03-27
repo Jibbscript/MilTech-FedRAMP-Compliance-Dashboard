@@ -1,0 +1,46 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dash-gap);
+}
+
+.scoreLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--dash-gap);
+}
+
+@media (min-width: 1024px) {
+  .scoreLayout {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.watermark {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-warning);
+  text-align: center;
+  margin-top: 12px;
+  padding: 6px;
+  border: 1px dashed var(--color-warning);
+  border-radius: var(--radius-sm);
+  opacity: 0.8;
+}
+
+.controlRow {
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.controlRow:hover {
+  background: var(--color-bg-card-hover);
+}
+
+.tableScroll {
+  max-height: 500px;
+  overflow-y: auto;
+}

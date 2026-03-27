@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 0;
+}
+
+.nodeWrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.node {
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.arrow {
+  padding: 0 8px;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .arrow {
+    transform: rotate(90deg);
+    padding: var(--space-1) 0;
+  }
+  .node {
+    min-width: auto;
+    width: 100%;
+  }
+}
