@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 const COLORS = {
   bg: "#0a0e14",
@@ -7,7 +7,7 @@ const COLORS = {
   border: "#1e2a3a",
   borderActive: "#2d6a4f",
   text: "#c8d6e5",
-  textMuted: "#5a6a7a",
+  textMuted: "#7a8a9a",
   textBright: "#e8f0f8",
   accent: "#2d6a4f",
   accentBright: "#40916c",
@@ -437,30 +437,28 @@ function InheritanceTab() {
 }
 
 // ============= SPRS TAB =============
+const INITIAL_CONTROLS = [
+  { id: "03.01.01", name: "Account Management", weight: 5, implemented: true, family: "AC" },
+  { id: "03.01.03", name: "Information Flow Enforcement", weight: 5, implemented: true, family: "AC" },
+  { id: "03.01.12", name: "Remote Access", weight: 5, implemented: true, family: "AC" },
+  { id: "03.05.03", name: "Multifactor Authentication", weight: 5, implemented: true, family: "IA" },
+  { id: "03.13.08", name: "Transmission Confidentiality", weight: 3, implemented: true, family: "SC" },
+  { id: "03.13.11", name: "CUI Encryption at Rest", weight: 5, implemented: false, family: "SC" },
+  { id: "03.14.01", name: "Flaw Remediation", weight: 3, implemented: true, family: "SI" },
+  { id: "03.14.03", name: "Security Alerts & Advisories", weight: 1, implemented: true, family: "SI" },
+  { id: "03.17.01", name: "Supply Chain Risk Mgmt Plan", weight: 5, implemented: false, family: "SR" },
+  { id: "03.04.02", name: "Baseline Configurations", weight: 3, implemented: true, family: "CM" },
+  { id: "03.06.01", name: "Incident Handling", weight: 3, implemented: true, family: "IR" },
+  { id: "03.12.01", name: "Security Assessments", weight: 3, implemented: false, family: "CA" },
+];
+
 function SPRSTab() {
-  const [simScore, setSimScore] = useState(98);
-  const controls = [
-    { id: "03.01.01", name: "Account Management", weight: 5, implemented: true, family: "AC" },
-    { id: "03.01.03", name: "Information Flow Enforcement", weight: 5, implemented: true, family: "AC" },
-    { id: "03.01.12", name: "Remote Access", weight: 5, implemented: true, family: "AC" },
-    { id: "03.05.03", name: "Multifactor Authentication", weight: 5, implemented: true, family: "IA" },
-    { id: "03.13.08", name: "Transmission Confidentiality", weight: 3, implemented: true, family: "SC" },
-    { id: "03.13.11", name: "CUI Encryption at Rest", weight: 5, implemented: false, family: "SC" },
-    { id: "03.14.01", name: "Flaw Remediation", weight: 3, implemented: true, family: "SI" },
-    { id: "03.14.03", name: "Security Alerts & Advisories", weight: 1, implemented: true, family: "SI" },
-    { id: "03.17.01", name: "Supply Chain Risk Mgmt Plan", weight: 5, implemented: false, family: "SR" },
-    { id: "03.04.02", name: "Baseline Configurations", weight: 3, implemented: true, family: "CM" },
-    { id: "03.06.01", name: "Incident Handling", weight: 3, implemented: true, family: "IR" },
-    { id: "03.12.01", name: "Security Assessments", weight: 3, implemented: false, family: "CA" },
-  ];
+  const [controls, setControls] = useState(INITIAL_CONTROLS);
 
   const toggleControl = (id) => {
-    const c = controls.find(x => x.id === id);
-    if (c) {
-      c.implemented = !c.implemented;
-      const deductions = controls.filter(x => !x.implemented).reduce((sum, x) => sum + x.weight, 0);
-      setSimScore(110 - deductions);
-    }
+    setControls(prev => prev.map(c =>
+      c.id === id ? { ...c, implemented: !c.implemented } : c
+    ));
   };
 
   const deductions = controls.filter(x => !x.implemented);
@@ -509,7 +507,7 @@ function SPRSTab() {
               </thead>
               <tbody>
                 {controls.map(c => (
-                  <tr key={c.id} style={{ borderBottom: `1px solid ${COLORS.border}15` }}>
+                  <tr key={c.id} onClick={() => toggleControl(c.id)} style={{ borderBottom: `1px solid ${COLORS.border}15`, cursor: "pointer" }}>
                     <td style={{ padding: "6px 8px", fontFamily: mono, fontSize: 10, color: COLORS.text }}>{c.id}</td>
                     <td style={{ padding: "6px 8px", color: COLORS.text, fontSize: 11 }}>{c.name}</td>
                     <td style={{ padding: "6px 8px" }}><Badge color="muted" size="xs">{c.family}</Badge></td>
