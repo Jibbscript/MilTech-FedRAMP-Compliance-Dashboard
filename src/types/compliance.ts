@@ -49,7 +49,7 @@ export interface ImpactLevelSpec {
   readonly personnel: string
   readonly color: string
   readonly examples: string
-  readonly saronic: string
+  readonly miltech: string
 }
 
 export interface InheritanceLayer {

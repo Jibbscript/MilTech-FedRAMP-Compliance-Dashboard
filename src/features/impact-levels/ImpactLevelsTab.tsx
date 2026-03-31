@@ -67,7 +67,7 @@ export function ImpactLevelsTab() {
                 <FieldRow label="Personnel" value={il.personnel} />
               </div>
 
-              {/* Saronic workloads */}
+              {/* MilTech FedRAMP workloads */}
               <div style={{
                 background: alpha(il.color, 0.08),
                 borderRadius: 'var(--radius-sm)',
@@ -82,13 +82,13 @@ export function ImpactLevelsTab() {
                   letterSpacing: '0.04em',
                   fontWeight: 700,
                   marginBottom: 4,
-                }}>Saronic Workloads</div>
+                }}>MilTech FedRAMP Workloads</div>
                 <div style={{
                   fontFamily: FONTS.sans,
                   fontSize: 'var(--text-xs)',
                   color: COLORS.text,
                   lineHeight: 1.5,
-                }}>{il.saronic}</div>
+                }}>{il.miltech}</div>
               </div>
             </div>
           ))}

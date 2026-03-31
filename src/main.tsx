@@ -4,10 +4,10 @@ import './styles/global.css'
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { SaronicDashboard } from '@/app/SaronicDashboard'
+import { MilTechDashboard } from '@/app/MilTechDashboard'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <SaronicDashboard />
+    <MilTechDashboard />
   </StrictMode>,
 )

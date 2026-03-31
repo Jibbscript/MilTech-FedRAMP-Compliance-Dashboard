@@ -12,7 +12,7 @@ export const inheritanceLayers: InheritanceLayer[] = [
     color: COLORS.warning,
   },
   {
-    provider: "Saronic Platform (PaaS/App)",
+    provider: "MilTech FedRAMP Platform (PaaS/App)",
     authId: "System-Specific",
     level: "IL5 Target",
     families: ["AC", "AT", "AU", "CM", "CP", "IA", "IR", "RA", "SA", "SI", "SR"],

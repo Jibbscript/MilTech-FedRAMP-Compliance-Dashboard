@@ -3,7 +3,7 @@ import { COLORS } from '@/theme/tokens'
 
 export const cspAssessments: EquivalencyAssessment[] = [
   { cspName: "AWS GovCloud (IaaS)", authorizationType: "FedRAMP High P-ATO + DISA IL5 PA", level: "IL5", status: "Authorized", controlsCovered: 421, totalRequired: 421 },
-  { cspName: "Saronic Platform (PaaS/App)", authorizationType: "FedRAMP Equivalency (In Progress)", level: "IL5 Target", status: "In Progress", controlsCovered: 312, totalRequired: 600 },
+  { cspName: "MilTech FedRAMP Platform (PaaS/App)", authorizationType: "FedRAMP Equivalency (In Progress)", level: "IL5 Target", status: "In Progress", controlsCovered: 312, totalRequired: 600 },
 ]
 
 export const gapAnalysis: EquivalencyGap[] = [

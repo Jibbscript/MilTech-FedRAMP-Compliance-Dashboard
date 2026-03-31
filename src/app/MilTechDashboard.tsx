@@ -11,7 +11,7 @@ import { SPRSTab } from '@/features/sprs/SPRSTab'
 import { GuardrailsTab } from '@/features/guardrails/GuardrailsTab'
 import { OSCALTab } from '@/features/oscal/OSCALTab'
 import { EquivalencyTab } from '@/features/equivalency/EquivalencyTab'
-import styles from './SaronicDashboard.module.css'
+import styles from './MilTechDashboard.module.css'
 
 const tabs = [
   { id: 'overview', label: 'Overview', icon: '◉' },
@@ -23,7 +23,7 @@ const tabs = [
   { id: 'equivalency', label: 'Equivalency', icon: '⬢' },
 ] as const
 
-export function SaronicDashboard() {
+export function MilTechDashboard() {
   const [activeTab, setActiveTab] = useState('overview')
 
   // SPRS state lifted to root so it survives tab switches
@@ -40,7 +40,7 @@ export function SaronicDashboard() {
       <header className={styles.header}>
         <div className={styles.headerLeft}>
           <div style={{ fontFamily: FONTS.mono, fontSize: 18, fontWeight: 900, color: COLORS.textBright, letterSpacing: '-0.02em' }}>
-            SARONIC<span style={{ color: COLORS.accent }}>//</span>COMPLIANCE
+            MILTECH FEDRAMP<span style={{ color: COLORS.accent }}>//</span>COMPLIANCE
           </div>
           <div className={styles.headerBadges}>
             <Badge color="accent">AWS GovCloud</Badge>
