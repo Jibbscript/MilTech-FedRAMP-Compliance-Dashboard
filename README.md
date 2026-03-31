@@ -1,4 +1,4 @@
-# Saronic Compliance Dashboard
+# MilTech FedRAMP Compliance Dashboard
 
 A React TypeScript dashboard visualizing DoD and federal security compliance posture across NIST 800-53r5, FedRAMP, CMMC 2.0, SPRS scoring, OSCAL integration, and FedRAMP equivalency.
 
@@ -14,7 +14,7 @@ A React TypeScript dashboard visualizing DoD and federal security compliance pos
 
 ## About
 
-Saronic Compliance Dashboard presents complex regulatory compliance data in a clear, actionable interface. It tracks control implementation status, inheritance chains, impact level requirements, and scoring across multiple federal security frameworks.
+MilTech FedRAMP Compliance Dashboard presents complex regulatory compliance data in a clear, actionable interface. It tracks control implementation status, inheritance chains, impact level requirements, and scoring across multiple federal security frameworks.
 
 Built as a demonstration of how defense and federal technology organizations can visualize their compliance posture. **All displayed data is synthetic and for demonstration purposes only.**
 

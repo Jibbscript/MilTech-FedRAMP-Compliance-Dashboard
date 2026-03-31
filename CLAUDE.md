@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Saronic Compliance Dashboard — a React TypeScript dashboard visualizing DoD/federal security and regulatory compliance posture. Tracks NIST 800-53r5, FedRAMP, NIST 800-171r3, CMMC 2.0, DoD SRG Impact Levels, OSCAL integration, and FedRAMP equivalency.
+MilTech FedRAMP Compliance Dashboard — a React TypeScript dashboard visualizing DoD/federal security and regulatory compliance posture. Tracks NIST 800-53r5, FedRAMP, NIST 800-171r3, CMMC 2.0, DoD SRG Impact Levels, OSCAL integration, and FedRAMP equivalency.
 
 ## Commands
 
@@ -26,13 +26,13 @@ Vite 8 + React 19 + TypeScript. CSS Modules for styling with CSS custom properti
 - `src/hooks/useSPRSSimulator.ts` — useReducer-based SPRS simulator state management
 - `src/components/` — Shared UI primitives: Badge, Card, MetricBox, ProgressBar, TabBar, FlowDiagram
 - `src/features/` — Feature-grouped tabs, each with component `.tsx`, styles `.module.css`, and `data.ts`
-- `src/app/SaronicDashboard.tsx` — Root shell: header, CUI banner, tab navigation, content routing
+- `src/app/MilTechDashboard.tsx` — Root shell: header, CUI banner, tab navigation, content routing
 
 ### Key Patterns
 
 - **No barrel files** — all imports are direct (`@/components/Badge`, not `@/components`)
 - **Feature co-location** — each tab's component, styles, and data live in one folder
-- **SPRS state lifted to root** — survives tab switches via `useSPRSSimulator` hook in `SaronicDashboard`
+- **SPRS state lifted to root** — survives tab switches via `useSPRSSimulator` hook in `MilTechDashboard`
 - **FlowDiagram** is generic — reused across 5+ locations for arrow-chain architecture diagrams
 - **Score is derived, never stored** — `calculateSPRSScore()` is a pure function in `lib/`
 
